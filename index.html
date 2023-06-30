@@ -13,12 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
+        /* Common CSS for both mobile and desktop */
         .background {
             position: fixed;
             top: 0;
@@ -110,7 +105,72 @@
             transform: translate(-50%, -50%);
             transition: opacity 5s ease-out, transform 2s ease-out;
         }
-        
+
+        /* CSS for desktop */
+        @media (min-width: 768px) {
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .background {
+                background-color: #your-desktop-background-color; /* Add your desired desktop background color */
+            }
+        }
+
+        /* CSS for mobile */
+        @media (max-width: 767px) {
+            .background {
+                background: linear-gradient(270deg, #ff6347, #ff8c00, #ffd700, #adff2f, #40e0d0, #6495ed, #ee82ee, #b0c4de, #ff00ff, #00ffff);
+                background-size: 2000% 2000%;
+                -webkit-animation: AnimationName 30s ease infinite;
+                -moz-animation: AnimationName 30s ease infinite;
+                animation: AnimationName 30s ease infinite;
+            }
+
+            @-webkit-keyframes AnimationName {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 51%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            @-moz-keyframes AnimationName {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 51%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            @keyframes AnimationName {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 51%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        }
     </style>
 </head>
 
@@ -124,7 +184,8 @@
             <img src="Profile Image.jpg" alt="Profile Image" class="profile-image" id="profileImage">
             <h4 class="text-center">Abhay Patel</h4>
             <p class="text-center">Data Enthusiast</p>
-            <p class="text-center">Enthusiastic about new tech, skilled in Python, Web Development and Desiging. Currently
+            <p class="text-center">Enthusiastic about new tech, skilled in Python, Web Development and Desiging.
+                Currently
                 expanding knowledge in Database Management for further growth.</p>
             <div class="social-icons">
                 <a href="https://twitter.com/AbhayPatel1552">
